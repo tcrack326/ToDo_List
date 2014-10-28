@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-    <title>todo</title>
+    <title>ToDo</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css styles/vendor.css -->
@@ -14,6 +14,7 @@
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
+    <link href='http://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
@@ -23,19 +24,18 @@
   </head>
   <body>
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
-        <li>Sass</li>
-        <li>Modernizr</li>
-        <li>Bourbon & Neat</li>
-        <li>UnderscoreJS</li>
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
-    </div>
+<div class="container">
+  <div class="header">
+    <h1>To-Do</h1>
+  </div>
+  <div class="body">
+    <ul class="list"></ul>
+    <ul class="addbutton">
+      <li>Click here to add item</li>
+    </ul>
+  </div>
+
+</div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -45,6 +45,7 @@
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
+
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

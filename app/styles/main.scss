@@ -9,18 +9,48 @@ body {
   color: #333;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+.container{
+  margin: 0 auto;
+  margin-top: 50px;
+  width:30%;
+  height:600px;;
+  background-image: URL('http://findicons.com/files/icons/2453/clipboard/1816/clipboard_paper.png' );
+  background-size: 100% 100%;
+  border-radius: 9px;
+}
+
+.header{
+
+  h1{
+    font-size: 30px;
+    text-align:center;
+    border-radius: 9px;
+    margin-top:30px;
+    padding-top:55px;
+    font-family: 'Covered By Your Grace', cursive;
+  }
+}
+
+.list{
+  height:100%;
+  padding-top:40px;
+  li{
+    margin-left:65px;
+    margin-bottom:0px;
+    height:18px;
+    font-size:15px;
+    font-family: 'Covered By Your Grace', cursive;
+  }
+}
+
+.addbutton{
+  padding-top:none;
+  li{
+    color:blue;
+    text-decoration:underline;
+    margin-left:65px;
+    height:18px;
+    font-size:15px;
+    font-family: 'Covered By Your Grace', cursive;
   }
 }
