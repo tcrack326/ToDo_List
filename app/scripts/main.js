@@ -48,7 +48,7 @@ $('.addbutton').on('click', function(event){
 
     $('.list').append(rendered(data));
 
-  $(self)[0].reset();
+  // $(self)[0].reset();
 
   });
 
@@ -87,8 +87,30 @@ $('.list').on('click', 'li', function (event) {
 
 });
 
+var delete_modifier;
 
 
+$('.list').on('click', 'button', function(event){
+    event.preventDefault();
+    event.stopPropagation();
+
+    var myID = $(this).attr('id');
+
+    delete_modifier = _.findWhere(todo_list, { _id: myID });
+    var self=this;
+
+    $.ajax({
+
+      type: 'DELETE',
+      url: my_server + "/" + delete_modifier._id,
+    }).done(function(data){
+
+      $(self).parent().remove();
+      todo_list = _.without(todo_list, delete_modifier);
+
+    });
+
+});
 
 
 
