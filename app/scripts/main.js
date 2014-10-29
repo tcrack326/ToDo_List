@@ -9,7 +9,7 @@ var Item = function(options) {
 };
 
 var todo_list;
-
+var completedTotal = 0;
 //Instances
 
 var task_template = $("#task_items").html();
@@ -21,6 +21,17 @@ var rendered = _.template(task_template);
           _.each(todo_list, function(item){
               $('.list').append(rendered(item));
           });
+
+          // add the total count
+          $('.totalcount').text(todo_list.length);
+
+          todo_list.forEach(function(list_item){
+            if(list_item.status == 'complete'){
+              completedTotal += 1;
+            }
+          });
+
+          $('.completedcount').text(completedTotal);
 
         });
 
@@ -45,12 +56,14 @@ $('.addbutton').on('click', function(event){
   }).done(function(data){
     // Add to my todo_list
     todo_list.push(data);
+    // add the total count
+    $('.totalcount').text(todo_list.length);
 
     $('.list').append(rendered(data));
 
   // $(self)[0].reset();
-
   });
+
 
 });
 
@@ -78,11 +91,16 @@ $('.list').on('click', 'li', function (event) {
  }).done(function(){
    if (todo_modifier.status == 'complete') {
      $(self).addClass('complete');
+     completedTotal += 1;
    } else {
      $(self).removeClass('complete');
+     completedTotal -= 1;
    }
 
+  $('.completedcount').text(completedTotal);
   });
+
+
 
 
 });
@@ -108,9 +126,24 @@ $('.list').on('click', 'button', function(event){
       $(self).parent().remove();
       todo_list = _.without(todo_list, delete_modifier);
 
+      // add the total count
+      if(delete_modifier.status == "complete"){
+      completedTotal -= 1;
+    }
+
+      $('.totalcount').text(todo_list.length);
+
+
+      $('.completedcount').text(completedTotal);
     });
 
+
 });
+
+
+
+
+
 
 
 

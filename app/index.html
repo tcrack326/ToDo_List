@@ -40,6 +40,9 @@
 
   </div>
 
+  <div class="completedcount"></div>
+  <div class="totalcount"></div>
+
 
 
 
@@ -50,9 +53,11 @@
       <% if(status == 'complete') { %>
         <li id="<%= _id %>" class='complete' ><%= task %> <button class="delete" id="<%= _id %>">x</button></li>
       <% } else { %>
-        <li id="<%= _id %>"  ><%= task %> <button class="delete" id="<%= _id %>">x</button></li> 
+        <li id="<%= _id %>"  ><%= task %> <button class="delete" id="<%= _id %>">x</button></li>
       <% } %>
 </script>
+
+
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
