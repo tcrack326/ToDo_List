@@ -7,6 +7,7 @@ body {
   background: #fafafa;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
+  background-image:URL("http://www.little-story.info/wp-content/uploads/2014/09/metal-table-texture-psd-website-templates-open-source-php-scripts-free-wordpress-7-pictures.jpg");
 }
 
 .container{
@@ -33,6 +34,12 @@ body {
   }
 }
 
+.delete{
+  float:right;
+  height:18px;
+
+}
+
 #myform{
   margin-left:130px;
 }
@@ -41,6 +48,8 @@ body {
   height:100%;
   padding-top:40px;
   li{
+    border-radius:3px;
+    width:240px;
     padding-right:50px;
     margin-left:65px;
     margin-bottom:0px;
